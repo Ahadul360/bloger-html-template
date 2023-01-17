@@ -4,8 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+:root{
+    font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+
+    --primary-color: rgb(0 0 0);
+    --secondary-color: rgb(32, 32, 32);
+    --highlight-color: #009961;
+    --hover-color:#af6d30;
+    --font-color-dark: rgb(36, 36, 36);
+    --font-color-light: rgb(255, 255, 255);
 }
 .wrapper{
     width: 1152px;
@@ -13,81 +21,98 @@ html{
 }
 
 
-/* Top Nav */
-.top-nav-section{
+/* Header Start */
+header{
     position: fixed;
     left: 0;
     right: 0;
-    padding: 4px 0;
     z-index: 999;
-    background-color:#000000;
+}
+.header-top{
+    background-color: var(--primary-color);
 }
 .top-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 32px;
+    padding: 15px 32px;
 }
-
+.top-nav .site-logo>a{
+    text-decoration: none;
+}
+.top-nav .site-logo>a>h2{
+    font-size: 2rem;
+    color: var(--font-color-light);
+}
 .top-nav .search-icon{
     cursor: pointer;
 }
 .top-nav .search-icon img{
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
-
-.bottom-nav-section{
-    padding-top: 100px;
+.header-bottom{
+    background-color: var(--highlight-color);
 }
-
-.nav ul{
+.bottom-nav{
+    text-align: center;
+}
+.bottom-nav ul{
     list-style: none;
-    background-color: red;
 }
-.nav ul li{
+.bottom-nav ul li{
     display: inline-block;
     position: relative;
 }
-.nav ul li a{
+.bottom-nav ul li a{
     display: block;
-    padding: 20px 25px;
-    color: aqua;
+    padding: 6px 25px;
+    color: var(--font-color-light);
     text-decoration: none;
     text-align: center;
     font-size: 18px;
 }
-.nav ul li ul.dropdown li{
+.bottom-nav ul li ul.dropdown li{
     display: block;
 }
-.nav ul li ul.dropdown{
+.bottom-nav ul li ul.dropdown{
     width: 100%;
-    background-color: #bbaf2a;
+    background-color: var(--highlight-color);
     position: absolute;
     z-index: 999;
     display: none;
 }
-.nav ul li a:hover{
-    background-color: azure;
+.bottom-nav ul li a:hover{
+    background-color: var(--hover-color);
 }
-.nav ul li:hover ul.dropdown{
+.bottom-nav ul li:hover ul.dropdown{
     display: block;
 }
-
-/* Top Nav End */
-
+/* Header End */
 
 
 
 
-/* Blog Section Start */
+/* Main Section Start */
+.main-section{
+    padding-top: 150px;
+}
+.header-ads{
+    width: 650px;
+    height: 80px;
+    background-color: green;
+    margin: 0 auto;
+}
+main{
+    display: flex;
+}
 .post-container{
-    padding: 0 200px;
+   padding: 10px;
 }
 .post-container > h2{
     font-size: 24px;
     text-transform: uppercase;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     position: relative;
 }
 .post-container h2::after{
@@ -95,13 +120,13 @@ html{
     position: absolute;
     height: 3px;
     width: 48px;
-    background-color: rgb(255, 196, 0);
+    background-color: var(--highlight-color);
     bottom: -8px;
     left: 0px;
 }
 .blogpost-card{
-    padding: 50px 0px;
-    border-top: 1px solid #bbaf2a;
+    padding: 25px 0px;
+    border-top: 1px solid var(--highlight-color);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -125,15 +150,15 @@ html{
     margin-left: 10px;
 }
 .blogpost-card .post-info > h3{
-    font-size: 20px;
+    font-size: 2rem;
 
 }
 .blogpost-card .post-info .post-meta>p{
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 3px 10px ;
     margin:10px 0px;
-    background-color: #222;
-    color: lightgray;
+    background-color: var(--highlight-color);
+    color: var(--font-color-light);
     display: inline-block;
 }
 .blogpost-card .post-info .post-body{
@@ -143,56 +168,130 @@ html{
     overflow: hidden;
     text-align: justify;
 }
-/* Blog Section End */
+.right-sidebar{
+    padding: 10px;
+}
+.sidebar-ads{
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    background-color: green;
+}
+.popular-post-container > h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    position: relative;
+}
+.popular-post-container h2::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 48px;
+    background-color: var(--highlight-color);
+    bottom: -8px;
+    left: 0px;
+}
+.popular-post-card{
+    padding: 10px 0px;
+    border-top: 1px solid var(--highlight-color);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.popular-post-card:nth-of-type(1){
+    border-top: none;
+    padding-top: 10px;
+}
+.popular-post-card{
+    display: flex;
+}
+.popular-post-card .thumbnail-image{
+    width: 35%;
+}
+.popular-post-card .thumbnail-image>img{
+    width: 120px;
+    height: 80px;
+}
+.popular-post-card .post-info{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.popular-post-card .post-info > h3{
+    font-size: 1.6rem;
+
+}
+.popular-post-card  .post-info .post-meta>p{
+    font-size: 1.3rem;
+    padding: 3px 10px ;
+    margin:10px 0px;
+    background-color: var(--highlight-color);
+    color: var(--font-color-light);
+    display: inline-block;
+}
+/* Main Section End */
+
+
+
 
 
 
 
 /* Footer Start */
-.footer-section a{
-    text-decoration: none;
-    color: rgb(233, 233, 233);
+footer h2{
+    color: var(--font-color-light);
 }
-.footer-section h2{
-    color: rgb(233, 233, 233);
-}
-.footer-section ul{
+footer ul{
     list-style: none;
 }
-.footer-section ul li a{
+footer ul li a{
     text-decoration: none;
-    color: rgb(233, 233, 233);
-    text-transform: uppercase;
-    font-size: 12px;
-    margin: 1px 0px;
+    color: var(--font-color-light);
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+footer ul li a:hover{
+    color: var(--hover-color);
 }
 .footer-top{
-    background-color:#161616;
+    background-color:var(--secondary-color);
 }
-.footer{
+.footer-nav{
     padding: 50px;
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
-.footer-title{
+.footer-left>h2, .footer-right>h2{
     position: relative;
     font-size: 20px;
     margin-bottom: 20px;
 }
-.footer-title::after{
+.footer-left>h2::after, .footer-right>h2::after{
     content: "";
     position: absolute;
     height: 3px;
     width: 36px;
-    background-color: rgb(255, 196, 0);
+    background-color: var(--highlight-color);
     bottom: -8px;
     left: 0px;
 }
 .footer-bottom{
-    color: #fff;
-    background-color:#000000;
+    color: var(--font-color-light);
+    background-color:var(--primary-color);
     text-align: center;
     padding: 10px 0px;
+}
+.copyright{
+    font-size: 1.5rem;
+}
+.copyright p a{
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+.copyright p a:hover{
+    color: var(--hover-color);
 }
 /* Footer End */

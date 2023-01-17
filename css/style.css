@@ -312,6 +312,25 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 768px) {
+    .bottom-nav ul li{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-nav ul li a{
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: relative;
+    }
+
+    .bottom-nav ul li ul.dropdown{
+        position: initial;
+        flex-direction: column;
+        background-color: #af6d30;
+        padding-left: 15px;
+    }
+
+
     main{
         flex-direction: column;
     }

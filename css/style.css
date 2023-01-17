@@ -25,7 +25,7 @@
     font-size: 14px;
 }
 .banner-ads{
-    width: 650px;
+    width: 300px;
     height: 80px;
     background-color: green;
     margin: 0 auto;
@@ -165,8 +165,8 @@ main{
 }
 .blogpost-card .post-info .post-meta>p{
     font-size: 1.4rem;
-    padding: 3px 10px ;
-    margin:10px 0px;
+    padding: 2px 5px ;
+    margin:6px 0px;
     background-color: var(--highlight-color);
     color: var(--font-color-light);
     display: inline-block;
@@ -236,8 +236,8 @@ main{
 }
 .popular-post-card  .post-info .post-meta>p{
     font-size: 1.3rem;
-    padding: 3px 10px ;
-    margin:10px 0px;
+    padding: 2px 5px ;
+    margin:6px 0px;
     background-color: var(--highlight-color);
     color: var(--font-color-light);
     display: inline-block;
@@ -351,11 +351,32 @@ footer ul li a:hover{
 
 }
 @media only screen and (max-width: 480px) {
-
+    .blogpost-card .thumbnail-image > img{
+        width: 160px;
+        height: 120px;
+    }
+    .popular-post-card .thumbnail-image>img{
+        width: 160px;
+        height: 120px;
+    }
 }
 @media only screen and (max-width: 412px) {
-
+    .blogpost-card .thumbnail-image > img{
+        width: 160px;
+        height: 120px;
+    }
+    .popular-post-card .thumbnail-image>img{
+        width: 160px;
+        height: 120px;
+    }
 }
 @media only screen and (max-width: 360px) {
-
+    .blogpost-card .thumbnail-image > img{
+        width: 140px;
+        height: 100px;
+    }
+    .popular-post-card .thumbnail-image>img{
+        width: 140px;
+        height: 100px;
+    }
 }

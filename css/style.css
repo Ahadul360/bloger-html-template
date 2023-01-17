@@ -16,7 +16,7 @@
     --font-color-light: rgb(255, 255, 255);
 }
 .wrapper{
-    width: 1152px;
+    width: 1170px;
     margin: 0 auto;
 }
 .ads{
@@ -31,8 +31,8 @@
     margin: 0 auto;
 }
 .sidebar-ads{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     margin: 5px;
     background-color: green;
 }
@@ -122,12 +122,12 @@ main{
    padding: 10px;
 }
 .post-container > h2{
-    font-size: 24px;
+    font-size: 2.4rem;
     text-transform: uppercase;
     margin-bottom: 20px;
     position: relative;
 }
-.post-container h2::after{
+.post-container > h2::after{
     content: "";
     position: absolute;
     height: 3px;
@@ -137,32 +137,31 @@ main{
     left: 0px;
 }
 .blogpost-card{
-    padding: 25px 0px;
+    padding: 15px 0px;
     border-top: 1px solid var(--highlight-color);
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 .blogpost-card:nth-of-type(1){
     border-top: none;
     padding-top: 16px;
-}
-.blogpost-card .thumbnail-image{
-    width: 30%;
 }
 .blogpost-card .thumbnail-image > img{
     width: 220px;
     height: 150px;
 }
 .blogpost-card .post-info{
-    width: 70%;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
 }
-.blogpost-card .post-info > h3{
+.blogpost-card .post-info > h2{
     font-size: 2rem;
-
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .blogpost-card .post-info .post-meta>p{
     font-size: 1.4rem;
@@ -178,10 +177,15 @@ main{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
 }
 .right-sidebar{
     padding: 10px;
+    margin: 0 auto;
+}
+.popular-post-container{
+    margin: 20px 0px;
 }
 .popular-post-container > h2{
     font-size: 1.8rem;
@@ -189,7 +193,7 @@ main{
     margin: 10px 0px;
     position: relative;
 }
-.popular-post-container h2::after{
+.popular-post-container > h2::after{
     content: "";
     position: absolute;
     height: 3px;
@@ -212,21 +216,22 @@ main{
 .popular-post-card{
     display: flex;
 }
-.popular-post-card .thumbnail-image{
-    width: 35%;
-}
 .popular-post-card .thumbnail-image>img{
     width: 120px;
     height: 80px;
 }
 .popular-post-card .post-info{
-    width: 65%;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
 }
-.popular-post-card .post-info > h3{
+.popular-post-card .post-info > h2{
     font-size: 1.6rem;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
 }
 .popular-post-card  .post-info .post-meta>p{
@@ -267,23 +272,13 @@ footer ul li a:hover{
 .footer-nav{
     padding: 50px;
     display: flex;
-    width: 100%;
     justify-content: space-around;
 }
 .footer-left>h2, .footer-right>h2{
-    position: relative;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.footer-left>h2::after, .footer-right>h2::after{
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 36px;
-    background-color: var(--highlight-color);
-    bottom: -8px;
-    left: 0px;
-}
+
 .footer-bottom{
     color: var(--font-color-light);
     background-color:var(--primary-color);
@@ -301,3 +296,66 @@ footer ul li a:hover{
     color: var(--hover-color);
 }
 /* Footer End */
+
+
+
+
+@media only screen and (max-width: 1170px) {
+    .wrapper{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .blogpost-card .thumbnail-image > img{
+        width: 180px;
+        height: 120px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+    .right-sidebar{
+        width: 100%;
+    }
+    .sidebar-ads{
+        margin: 0 auto;
+    }
+    .popular-post-container > h2 {
+        font-size: 2.4rem;
+    }
+    .popular-post-card {
+        padding: 15px 0px;
+    }
+    .popular-post-card .thumbnail-image>img{
+        width: 220px;
+        height: 150px;
+    }
+    .popular-post-card .post-info > h2{
+        font-size: 2rem;
+    
+    }
+    .popular-post-card  .post-info .post-meta>p{
+        font-size: 1.4rem;
+    }
+    .footer-nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-right{
+        margin-top: 35px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (max-width: 480px) {
+
+}
+@media only screen and (max-width: 412px) {
+
+}
+@media only screen and (max-width: 360px) {
+
+}

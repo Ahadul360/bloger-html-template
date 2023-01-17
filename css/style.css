@@ -19,7 +19,23 @@
     width: 1152px;
     margin: 0 auto;
 }
-
+.ads{
+    text-align: center; 
+    color:#fff; 
+    font-size: 14px;
+}
+.banner-ads{
+    width: 650px;
+    height: 80px;
+    background-color: green;
+    margin: 0 auto;
+}
+.sidebar-ads{
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    background-color: green;
+}
 
 /* Header Start */
 header{
@@ -95,15 +111,11 @@ header{
 
 /* Main Section Start */
 .main-section{
-    padding-top: 150px;
+    padding-top: 100px;
 }
-.header-ads{
-    width: 650px;
-    height: 80px;
-    background-color: green;
-    margin: 0 auto;
-}
+
 main{
+    margin-top: 10px;
     display: flex;
 }
 .post-container{
@@ -141,7 +153,6 @@ main{
 .blogpost-card .thumbnail-image > img{
     width: 220px;
     height: 150px;
-    object-fit: cover;
 }
 .blogpost-card .post-info{
     width: 70%;
@@ -167,15 +178,10 @@ main{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: justify;
+    font-size: 1.6rem;
 }
 .right-sidebar{
     padding: 10px;
-}
-.sidebar-ads{
-    width: 350px;
-    height: 350px;
-    margin: 5px;
-    background-color: green;
 }
 .popular-post-container > h2{
     font-size: 1.8rem;

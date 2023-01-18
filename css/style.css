@@ -21,20 +21,21 @@
 }
 .ads{
     text-align: center; 
-    color:#fff; 
+    color:rgb(0, 0, 0); 
     font-size: 14px;
+    border: 1px solid black;
 }
 .banner-ads{
     width: 300px;
     height: 80px;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     margin: 0 auto;
 }
 .sidebar-ads{
     width: 300px;
     height: 300px;
     margin: 5px;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
 }
 
 /* Header Start */
@@ -60,12 +61,17 @@ header{
     font-size: 2rem;
     color: var(--font-color-light);
 }
-.top-nav .search-icon{
-    cursor: pointer;
+
+.nav-icon{
+    display: flex;
 }
-.top-nav .search-icon img{
-    width: 20px;
-    height: 20px;
+.menu-icon, .search-icon{
+    color: var(--font-color-light);
+    font-size: 2rem;
+    margin: 0px 10px;
+}
+.menu-icon{
+    display: none;
 }
 .header-bottom{
     background-color: var(--highlight-color);
@@ -93,7 +99,7 @@ header{
 }
 .bottom-nav ul li ul.dropdown{
     width: 100%;
-    background-color: var(--highlight-color);
+    background-color: var(--secondary-color);
     position: absolute;
     z-index: 999;
     display: none;
@@ -218,7 +224,7 @@ main{
 }
 .popular-post-card .thumbnail-image>img{
     width: 120px;
-    height: 80px;
+    height: 90px;
 }
 .popular-post-card .post-info{
     display: flex;
@@ -278,7 +284,16 @@ footer ul li a:hover{
     font-size: 20px;
     margin-bottom: 10px;
 }
-
+.footer-right {
+    text-align: center;
+}
+.footer-right ul li{
+     display: inline-block;
+}
+.footer-right ul li a{
+    font-size: 2.4rem;
+    padding: 5px;
+}
 .footer-bottom{
     color: var(--font-color-light);
     background-color:var(--primary-color);
@@ -312,6 +327,15 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 768px) {
+    .menu-icon{
+        display: block;
+    }
+    .bottom-nav{
+        display: none;
+    }
+    .toggle-nav{
+        display: block;
+    }
     .bottom-nav ul li{
         display: flex;
         flex-direction: column;
@@ -322,17 +346,20 @@ footer ul li a:hover{
         text-align: left;
         position: relative;
     }
-
     .bottom-nav ul li ul.dropdown{
         position: initial;
         flex-direction: column;
-        background-color: #af6d30;
         padding-left: 15px;
     }
-
-
+    .main-section{
+        padding-top: 70px;
+    }
     main{
         flex-direction: column;
+    }
+    .blogpost-card .thumbnail-image > img{
+        width: 200px;
+        height: 150px;
     }
     .right-sidebar{
         width: 100%;
@@ -347,7 +374,7 @@ footer ul li a:hover{
         padding: 15px 0px;
     }
     .popular-post-card .thumbnail-image>img{
-        width: 220px;
+        width: 200px;
         height: 150px;
     }
     .popular-post-card .post-info > h2{

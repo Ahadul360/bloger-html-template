@@ -52,26 +52,60 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 32px;
+    padding: 15px 24px;
 }
 .top-nav .site-logo>a{
     text-decoration: none;
 }
 .top-nav .site-logo>a>h2{
     font-size: 2rem;
-    color: var(--font-color-light);
+    color: var(--highlight-color);
+    background-color: var(--font-color-light);
+    padding: 5px;
 }
 
 .nav-icon{
     display: flex;
+    background-color: var(--font-color-light);
+    padding: 1px;
+    margin-left: 3px;
 }
-.menu-icon, .search-icon{
-    color: var(--font-color-light);
+.search-box{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--font-color-light);
+}
+.search-box:hover input{
+    width: 300px;
+}
+.search-box input{
+    width: 0px;
+    outline: none;
+    border: none;
+    background: transparent;
+    transition: 0.8s;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0px 2px;
+}
+.search-box i{
+    color: var(--highlight-color);
     font-size: 2rem;
     margin: 0px 10px;
 }
-.menu-icon{
+.menu-box{
     display: none;
+    height: 30px;
+    cursor: pointer;
+    background-color: var(--font-color-light);
+}
+.menu-box i{
+    color: var(--highlight-color);
+    font-size: 2rem;
+    padding: 5px;
 }
 .header-bottom{
     background-color: var(--highlight-color);
@@ -109,6 +143,7 @@ header{
 }
 .bottom-nav ul li:hover ul.dropdown{
     display: block;
+    transition: 0.8s;
 }
 /* Header End */
 
@@ -327,7 +362,7 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 768px) {
-    .menu-icon{
+    .menu-box{
         display: block;
     }
     .bottom-nav{
@@ -335,6 +370,7 @@ footer ul li a:hover{
     }
     .toggle-nav{
         display: block;
+        transition: 0.8s;
     }
     .bottom-nav ul li{
         display: flex;
@@ -394,7 +430,9 @@ footer ul li a:hover{
     
 }
 @media only screen and (max-width: 600px) {
-
+    .top-nav {
+        padding: 15px 15px;
+    }
 }
 @media only screen and (max-width: 480px) {
     .blogpost-card .thumbnail-image > img{
@@ -417,6 +455,9 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 360px) {
+    .top-nav {
+        padding: 15px 10px;
+    }
     .blogpost-card .thumbnail-image > img{
         width: 140px;
         height: 100px;

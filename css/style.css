@@ -61,7 +61,7 @@ header{
     font-size: 2rem;
     color: var(--highlight-color);
     background-color: var(--font-color-light);
-    padding: 5px;
+    padding: 4.5px;
 }
 
 .nav-icon{
@@ -80,6 +80,7 @@ header{
 }
 .search-box:hover input{
     width: 300px;
+    padding: 0px 3px;
 }
 .search-box input{
     width: 0px;
@@ -89,7 +90,6 @@ header{
     transition: 0.8s;
     font-weight: 500;
     font-size: 1.5rem;
-    padding: 0px 2px;
 }
 .search-box i{
     color: var(--highlight-color);
@@ -379,6 +379,7 @@ footer ul li a:hover{
     .toggle-nav{
         display: block;
         transition: 0.8s;
+        padding-bottom: 15px;
     }
     .bottom-nav ul li{
         display: flex;
@@ -389,11 +390,14 @@ footer ul li a:hover{
         width: 100%;
         text-align: left;
         position: relative;
+        padding: 5px 10px;
     }
     .bottom-nav ul li ul.dropdown{
         position: initial;
         flex-direction: column;
-        padding-left: 15px;
+    }
+    .bottom-nav ul li ul.dropdown li a{
+        padding-left: 20px;
     }
     .main-section{
         padding-top: 70px;
@@ -441,8 +445,14 @@ footer ul li a:hover{
     .top-nav {
         padding: 15px 15px;
     }
+    .search-box:hover input{
+        width: 250px;
+    }
 }
 @media only screen and (max-width: 480px) {
+    .search-box:hover input{
+        width: 150px;
+    }
     .blogpost-card .thumbnail-image > img{
         width: 160px;
         height: 120px;
@@ -473,5 +483,10 @@ footer ul li a:hover{
     .popular-post-card .thumbnail-image>img{
         width: 140px;
         height: 100px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .search-box:hover input{
+        width: 80px;
     }
 }

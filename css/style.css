@@ -38,6 +38,10 @@
     background-color: rgb(255, 255, 255);
 }
 
+
+
+
+
 /* Header Start */
 header{
     position: fixed;
@@ -52,60 +56,61 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 24px;
+    padding: 1.5rem 2.4rem;
 }
-.top-nav .site-logo>a{
+.site-logo>a{
     text-decoration: none;
 }
-.top-nav .site-logo>a>h2{
+.site-logo>a>h2{
     font-size: 2rem;
     color: var(--highlight-color);
     background-color: var(--font-color-light);
-    padding: 4.5px;
+    padding: 0.4rem;
 }
-
 .nav-icon{
     display: flex;
-    background-color: var(--font-color-light);
-    padding: 1px;
-    margin-left: 3px;
+    overflow: hidden;
 }
 .search-box{
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 3rem;
     cursor: pointer;
     align-items: center;
     background-color: var(--font-color-light);
 }
 .search-box:hover input{
-    width: 300px;
-    padding: 0px 3px;
+    width: 30rem;
+    padding: 0rem 0.4rem;
 }
 .search-box input{
-    width: 0px;
+    width: 0rem;
     outline: none;
     border: none;
     background: transparent;
-    transition: 0.8s;
-    font-weight: 500;
+    transition: 0.5s;
     font-size: 1.5rem;
 }
 .search-box i{
     color: var(--highlight-color);
     font-size: 2rem;
-    margin: 0px 10px;
+    padding: 0.5rem 0.7rem;
+}
+.search-box i:hover{
+    background-color: var(--hover-color);
 }
 .menu-box{
     display: none;
-    height: 30px;
     cursor: pointer;
     background-color: var(--font-color-light);
 }
 .menu-box i{
     color: var(--highlight-color);
-    font-size: 2rem;
-    padding: 5px;
+    font-size: 2.5rem;
+    padding: 0rem 0.5rem 0.2rem 0.5rem;
+}
+.menu-box i:hover{
+    background-color: var(--hover-color);
 }
 .header-bottom{
     background-color: var(--highlight-color);
@@ -122,16 +127,16 @@ header{
 }
 .bottom-nav ul li a{
     display: block;
-    padding: 6px 25px;
+    padding: 0.6rem 2.5rem;
     color: var(--font-color-light);
     text-decoration: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
-.bottom-nav ul li ul.dropdown li{
+.bottom-nav ul li ul.submenu li{
     display: block;
 }
-.bottom-nav ul li ul.dropdown{
+.bottom-nav ul li ul.submenu{
     width: 100%;
     background-color: var(--secondary-color);
     position: absolute;
@@ -141,9 +146,18 @@ header{
 .bottom-nav ul li a:hover{
     background-color: var(--hover-color);
 }
-.bottom-nav ul li:hover ul.dropdown{
+.bottom-nav ul li:hover ul.submenu{
     display: block;
     transition: 0.8s;
+}
+.dropdown-menu{
+    position: relative;
+}
+
+.dropdown-menu>a::after{
+    content: "\F229";
+    font-family: "bootstrap-icons";
+    font-size: 1.5rem;
 }
 /* Header End */
 
@@ -152,52 +166,53 @@ header{
 
 /* Main Section Start */
 .main-section{
-    padding-top: 100px;
+    padding-top: 10rem;
 }
 
 main{
-    margin-top: 10px;
+    margin-top: 1rem;
     display: flex;
 }
 .post-container{
-   padding: 10px;
+   padding: 1rem;
 }
 .post-container > h2{
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    font-weight: 800;
+    margin-bottom: 2rem;
     position: relative;
 }
 .post-container > h2::after{
     content: "";
     position: absolute;
-    height: 3px;
-    width: 48px;
+    height: 0.3rem;
+    width: 4.8rem;
     background-color: var(--highlight-color);
-    bottom: -8px;
-    left: 0px;
+    bottom: -0.8rem;
+    left: 0rem;
 }
 .blogpost-card{
-    padding: 15px 0px;
+    padding: 1.5rem 0rem;
     border-top: 1px solid var(--highlight-color);
     display: flex;
     flex-direction: row;
 }
 .blogpost-card:nth-of-type(1){
     border-top: none;
-    padding-top: 16px;
+    padding-top: 1.6rem;
 }
 .blogpost-card .thumbnail-image > img{
-    width: 220px;
-    height: 150px;
+    width: 22rem;
+    height: 15rem;
 }
 .blogpost-card .post-info{
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 .blogpost-card .post-info > h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -206,8 +221,8 @@ main{
 }
 .blogpost-card .post-info .post-meta>p{
     font-size: 1.4rem;
-    padding: 2px 5px ;
-    margin:6px 0px;
+    padding: 0.2rem 0.5rem;
+    margin:0.6rem 0rem;
     background-color: var(--highlight-color);
     color: var(--font-color-light);
     display: inline-block;
@@ -222,49 +237,50 @@ main{
     line-height: 2rem;
 }
 .right-sidebar{
-    padding: 10px;
+    padding: 1rem;
     margin: 0 auto;
 }
 .popular-post-container{
-    margin: 20px 0px;
+    margin: 2rem 0rem;
 }
 .popular-post-container > h2{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 800;
     text-transform: uppercase;
-    margin: 10px 0px;
+    margin: 1rem 0rem;
     position: relative;
 }
 .popular-post-container > h2::after{
     content: "";
     position: absolute;
-    height: 3px;
-    width: 48px;
+    height: 0.3rem;
+    width: 4.8rem;
     background-color: var(--highlight-color);
-    bottom: -8px;
-    left: 0px;
+    bottom: -0.8rem;
+    left: 0rem;
 }
 .popular-post-card{
-    padding: 10px 0px;
-    border-top: 1px solid var(--highlight-color);
+    padding: 1rem 0rem;
+    border-top: 0.1rem solid var(--highlight-color);
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 .popular-post-card:nth-of-type(1){
     border-top: none;
-    padding-top: 10px;
+    padding-top: 1rem;
 }
 .popular-post-card{
     display: flex;
 }
 .popular-post-card .thumbnail-image>img{
-    width: 120px;
-    height: 90px;
+    width: 12rem;
+    height: 9rem;
 }
 .popular-post-card .post-info{
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 .popular-post-card .post-info > h2{
     font-size: 1.6rem;
@@ -277,8 +293,8 @@ main{
 }
 .popular-post-card  .post-info .post-meta>p{
     font-size: 1.3rem;
-    padding: 2px 5px ;
-    margin:6px 0px;
+    padding: 0.2rem 0.5rem ;
+    margin:0.6rem 0.0rem;
     background-color: var(--highlight-color);
     color: var(--font-color-light);
     display: inline-block;
@@ -316,8 +332,8 @@ footer ul li a:hover{
     justify-content: space-around;
 }
 .footer-left>h2, .footer-right>h2{
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 .footer-right {
     text-align: center;
@@ -327,13 +343,13 @@ footer ul li a:hover{
 }
 .footer-right ul li a{
     font-size: 2.4rem;
-    padding: 5px;
+    padding: 0.5rem;
 }
 .footer-bottom{
     color: var(--font-color-light);
     background-color:var(--primary-color);
     text-align: center;
-    padding: 10px 0px;
+    padding: 1rem 0rem;
 }
 .copyright{
     font-size: 1.5rem;
@@ -354,8 +370,8 @@ footer ul li a:hover{
 }
 @media only screen and (max-width: 850px) {
     .blogpost-card .thumbnail-image > img{
-        width: 180px;
-        height: 120px;
+        width: 18rem;
+        height: 12rem;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -379,7 +395,7 @@ footer ul li a:hover{
     .toggle-nav{
         display: block;
         transition: 0.8s;
-        padding-bottom: 15px;
+        padding-bottom: 1.5rem;
     }
     .bottom-nav ul li{
         display: flex;
@@ -390,24 +406,24 @@ footer ul li a:hover{
         width: 100%;
         text-align: left;
         position: relative;
-        padding: 5px 10px;
+        padding: 0.5rem 1rem;
     }
-    .bottom-nav ul li ul.dropdown{
+    .bottom-nav ul li ul.submenu{
         position: initial;
         flex-direction: column;
     }
-    .bottom-nav ul li ul.dropdown li a{
-        padding-left: 20px;
+    .bottom-nav ul li ul.submenu li a{
+        padding-left: 2rem;
     }
     .main-section{
-        padding-top: 70px;
+        padding-top: 7rem;
     }
     main{
         flex-direction: column;
     }
     .blogpost-card .thumbnail-image > img{
-        width: 200px;
-        height: 150px;
+        width: 20rem;
+        height: 15rem;
     }
     .right-sidebar{
         width: 100%;
@@ -416,17 +432,18 @@ footer ul li a:hover{
         margin: 0 auto;
     }
     .popular-post-container > h2 {
-        font-size: 2.4rem;
+        font-size: 2rem;
+        font-weight: 800;
     }
     .popular-post-card {
-        padding: 15px 0px;
+        padding: 1.5rem 0rem;
     }
     .popular-post-card .thumbnail-image>img{
-        width: 200px;
-        height: 150px;
+        width: 20rem;
+        height: 15rem;
     }
     .popular-post-card .post-info > h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
     
     }
     .popular-post-card  .post-info .post-meta>p{
@@ -437,56 +454,56 @@ footer ul li a:hover{
         text-align: center;
     }
     .footer-right{
-        margin-top: 35px;
+        margin-top: 3.5rem;
     }
     
 }
 @media only screen and (max-width: 600px) {
     .top-nav {
-        padding: 15px 15px;
+        padding: 1.5rem 1.5rem;
     }
     .search-box:hover input{
-        width: 250px;
+        width: 25rem;
     }
 }
 @media only screen and (max-width: 480px) {
     .search-box:hover input{
-        width: 150px;
+        width: 15rem;
     }
     .blogpost-card .thumbnail-image > img{
-        width: 160px;
-        height: 120px;
+        width: 16rem;
+        height: 12rem;
     }
     .popular-post-card .thumbnail-image>img{
-        width: 160px;
-        height: 120px;
+        width: 16rem;
+        height: 12rem;
     }
 }
 @media only screen and (max-width: 412px) {
     .blogpost-card .thumbnail-image > img{
-        width: 160px;
-        height: 120px;
+        width: 16rem;
+        height: 12rem;
     }
     .popular-post-card .thumbnail-image>img{
-        width: 160px;
-        height: 120px;
+        width: 16rem;
+        height: 12rem;
     }
 }
 @media only screen and (max-width: 360px) {
     .top-nav {
-        padding: 15px 10px;
+        padding: 1.5rem 1rem;
     }
     .blogpost-card .thumbnail-image > img{
-        width: 140px;
-        height: 100px;
+        width: 14rem;
+        height: 10rem;
     }
     .popular-post-card .thumbnail-image>img{
-        width: 140px;
-        height: 100px;
+        width: 14rem;
+        height: 10rem;
     }
 }
 @media only screen and (max-width: 280px) {
     .search-box:hover input{
-        width: 80px;
+        width: 8rem;
     }
 }

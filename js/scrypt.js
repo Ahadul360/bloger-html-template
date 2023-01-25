@@ -1,6 +1,7 @@
 let menu = document.querySelector('.menu-box i')
 let nav = document.querySelector('.bottom-nav')
 let contentOverlay = document.querySelector('.content-overlay')
+let searchIcon = document.querySelector('.search-box i')
 
 menu.addEventListener('click',()=>{
   nav.classList.toggle('active-nav')
@@ -8,11 +9,15 @@ menu.addEventListener('click',()=>{
   document.body.classList.toggle('no-scroll')
 });
 
-contentOverlay.onclick=()=>{
+contentOverlay.addEventListener('click',()=>{
   nav.classList.toggle('active-nav')
   contentOverlay.classList.toggle('active-overlay')
   document.body.classList.toggle('no-scroll')
-}
+})
+
+searchIcon.addEventListener('click',()=>{
+  document.querySelector('.search-box form').classList.toggle('show-search-box')
+})
 
 window.addEventListener("resize", () => {
   let cw = document.documentElement.clientWidth;
@@ -21,4 +26,5 @@ window.addEventListener("resize", () => {
     contentOverlay.classList.remove('active-overlay')
     nav.classList.remove('active-nav')
   }
+  document.querySelector('.search-box form').classList.remove('show-search-box')
 });

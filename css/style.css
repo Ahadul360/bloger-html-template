@@ -124,7 +124,7 @@ header{
     background-color: var(--highlight-color);
     color: var(--font-color-light);
     font-size: 2rem;
-    padding: 0.3rem 0.8rem 0.4rem 0.8rem;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
 }
 .search-box i:hover{
     background-color: var(--hover-color);

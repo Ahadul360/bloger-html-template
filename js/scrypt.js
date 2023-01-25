@@ -1,7 +1,7 @@
-let menu = document.querySelector('.menu-box')
+let menu = document.querySelector('.menu-box i')
 let nav = document.querySelector('.bottom-nav')
 let contentOverlay = document.querySelector('.content-overlay')
-let searchIcon = document.querySelector('.search-box')
+let searchIcon = document.querySelector('.search-box i')
 
 menu.addEventListener('click',()=>{
   nav.classList.toggle('active-nav')
@@ -19,11 +19,11 @@ searchIcon.addEventListener('click',()=>{
   document.querySelector('.search-box form').classList.toggle('show-search-box')
 })
 
-// window.addEventListener("resize", () => {
-//   let cw = document.documentElement.clientWidth;
-//  if(cw > 768){
-//     document.body.classList.remove('no-scroll')
-//     contentOverlay.classList.remove('active-overlay')
-//     nav.classList.remove('active-nav')
-//   }
-// });
+window.addEventListener("resize", () => {
+  let cw = document.documentElement.clientWidth;
+ if(cw > 768){
+    document.body.classList.remove('no-scroll')
+    contentOverlay.classList.remove('active-overlay')
+    nav.classList.remove('active-nav')
+  }
+});

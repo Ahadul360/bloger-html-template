@@ -419,9 +419,9 @@ footer ul li a:hover{
     .bottom-nav{
         display: none;
     }
-    .toggle-nav{
+    .active-nav{
         display: block;
-        transition: 0.8s;
+        transition: 0.5s;
     }
     .bottom-nav ul li{
         display: flex;

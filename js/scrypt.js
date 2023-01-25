@@ -1,7 +1,7 @@
-let menu = document.querySelector('.menu-box i')
+let menu = document.querySelector('.menu-box')
 let nav = document.querySelector('.bottom-nav')
 let contentOverlay = document.querySelector('.content-overlay')
-let searchIcon = document.querySelector('.search-box i')
+let searchIcon = document.querySelector('.search-box')
 
 menu.addEventListener('click',()=>{
   nav.classList.toggle('active-nav')

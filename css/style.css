@@ -5,15 +5,24 @@
     box-sizing: border-box;
 }
 :root{
+    height: 100vh;
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
 
-    --primary-color: rgb(0 0 0);
-    --secondary-color: rgb(32, 32, 32);
-    --highlight-color: #009961;
-    --hover-color:#af6d30;
-    --font-color-dark: rgb(36, 36, 36);
+    /* CSS Variable */
+    --primary-color: rgb(17, 14, 14);
+    --secondary-color: rgb(19, 180, 86);
+
+    --highlight-color: rgb(19, 180, 86);
+    --hover-color:rgb(0, 158, 66);
+    
+    --font-color-dark: rgb(59, 59, 59);
     --font-color-light: rgb(255, 255, 255);
+
+    --border-color-dark: rgb(156, 156, 156);
+    --border-color-light: rgb(255, 255, 255);
+
 }
 .wrapper{
     width: 1170px;
@@ -37,7 +46,9 @@
     margin: 5px;
     background-color: rgb(255, 255, 255);
 }
-
+.no-scroll {
+    overflow-y: hidden;
+  }
 
 
 
@@ -50,6 +61,7 @@ header{
     z-index: 999;
 }
 .header-top{
+    height: 6.2rem;
     background-color: var(--primary-color);
 }
 .top-nav{
@@ -92,9 +104,10 @@ header{
     font-size: 1.5rem;
 }
 .search-box i{
-    color: var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: var(--font-color-light);
     font-size: 2rem;
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.8rem;
 }
 .search-box i:hover{
     background-color: var(--hover-color);
@@ -102,10 +115,10 @@ header{
 .menu-box{
     display: none;
     cursor: pointer;
-    background-color: var(--font-color-light);
 }
 .menu-box i{
-    color: var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: var(--font-color-light);
     font-size: 2.5rem;
     padding: 0rem 0.5rem 0.2rem 0.5rem;
 }
@@ -113,7 +126,8 @@ header{
     background-color: var(--hover-color);
 }
 .header-bottom{
-    background-color: var(--highlight-color);
+    background-color: var(--secondary-color);
+    border-bottom: 0.1rem solid var(--border-color-light);
 }
 .bottom-nav{
     text-align: center;
@@ -122,8 +136,8 @@ header{
     list-style: none;
 }
 .bottom-nav ul li{
-    display: inline-block;
     position: relative;
+    display: inline-block;
 }
 .bottom-nav ul li a{
     display: block;
@@ -131,7 +145,7 @@ header{
     color: var(--font-color-light);
     text-decoration: none;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 .bottom-nav ul li ul.submenu li{
     display: block;
@@ -142,6 +156,7 @@ header{
     position: absolute;
     z-index: 999;
     display: none;
+    border: 0.1rem solid var(--border-color-light);
 }
 .bottom-nav ul li a:hover{
     background-color: var(--hover-color);
@@ -157,7 +172,7 @@ header{
 .dropdown-menu>a::after{
     content: "\F229";
     font-family: "bootstrap-icons";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 /* Header End */
 
@@ -166,7 +181,7 @@ header{
 
 /* Main Section Start */
 .main-section{
-    padding-top: 10rem;
+    padding-top: 10.5rem;
 }
 
 main{
@@ -178,6 +193,7 @@ main{
 }
 .post-container > h2{
     font-size: 2rem;
+    color: var(--font-color-dark);
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 2rem;
@@ -194,7 +210,7 @@ main{
 }
 .blogpost-card{
     padding: 1.5rem 0rem;
-    border-top: 1px solid var(--highlight-color);
+    border-top: 1px solid var(--border-color);
     display: flex;
     flex-direction: row;
 }
@@ -213,6 +229,7 @@ main{
 }
 .blogpost-card .post-info > h2{
     font-size: 1.8rem;
+    color: var(--font-color-dark);
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -235,6 +252,7 @@ main{
     text-align: justify;
     font-size: 1.7rem;
     line-height: 2rem;
+    color: var(--font-color-dark);
 }
 .right-sidebar{
     padding: 1rem;
@@ -245,6 +263,7 @@ main{
 }
 .popular-post-container > h2{
     font-size: 1.6rem;
+    color: var(--font-color-dark);
     font-weight: 800;
     text-transform: uppercase;
     margin: 1rem 0rem;
@@ -261,7 +280,7 @@ main{
 }
 .popular-post-card{
     padding: 1rem 0rem;
-    border-top: 0.1rem solid var(--highlight-color);
+    border-top: 0.1rem solid var(--border-color);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -284,6 +303,7 @@ main{
 }
 .popular-post-card .post-info > h2{
     font-size: 1.6rem;
+    color: var(--font-color-dark);
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -324,7 +344,8 @@ footer ul li a:hover{
     color: var(--hover-color);
 }
 .footer-top{
-    background-color:var(--secondary-color);
+    background-color: var(--primary-color);
+    opacity: 0.95;
 }
 .footer-nav{
     padding: 50px;
@@ -344,6 +365,11 @@ footer ul li a:hover{
 .footer-right ul li a{
     font-size: 2.4rem;
     padding: 0.5rem;
+    color: var(--highlight-color);
+}
+.footer-right ul li a i{
+    background-color: var(--font-color-light);
+    padding: 0.3rem 0.5rem;
 }
 .footer-bottom{
     color: var(--font-color-light);
@@ -382,6 +408,7 @@ footer ul li a:hover{
         height: 100vh;
         opacity: 0.5;
         display: none;
+        z-index: 99;
     }
     .active-overlay{
         display: block;
@@ -395,7 +422,6 @@ footer ul li a:hover{
     .toggle-nav{
         display: block;
         transition: 0.8s;
-        padding-bottom: 1.5rem;
     }
     .bottom-nav ul li{
         display: flex;
@@ -414,6 +440,9 @@ footer ul li a:hover{
     }
     .bottom-nav ul li ul.submenu li a{
         padding-left: 2rem;
+    }
+    .bottom-nav ul li:hover ul.submenu{
+        border: none
     }
     .main-section{
         padding-top: 7rem;

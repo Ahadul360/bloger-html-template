@@ -26,5 +26,4 @@ window.addEventListener("resize", () => {
     contentOverlay.classList.remove('active-overlay')
     nav.classList.remove('active-nav')
   }
-  document.querySelector('.search-box form').classList.remove('show-search-box')
 });

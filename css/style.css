@@ -35,15 +35,14 @@
     border: 1px solid black;
 }
 .banner-ads{
-    width: 300px;
-    height: 80px;
+    width: 30rem;
+    height: 8rem;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
 }
 .sidebar-ads{
-    width: 300px;
-    height: 300px;
-    margin: 5px;
+    width: 30rem;
+    height: 30rem;
     background-color: rgb(255, 255, 255);
 }
 .no-scroll {
@@ -199,17 +198,17 @@ header{
     padding-top: 10.5rem;
 }
 main{
-    margin-top: 1rem;
+    margin: 1rem 10rem;
     display: flex;
 }
 .post-container{
    padding: 1rem;
 }
 .post-container > h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--font-color-dark);
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -235,6 +234,7 @@ main{
 .blogpost-card .thumbnail-image > img{
     width: 22rem;
     height: 15rem;
+    object-fit: cover;
 }
 .blogpost-card .post-info{
     display: flex;
@@ -243,10 +243,11 @@ main{
 }
 .blogpost-card .post-info > h2{
     font-size: 1.8rem;
+    font-weight: 600;
     color: var(--font-color-dark);
     text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -271,6 +272,7 @@ main{
 .right-sidebar{
     padding: 1rem;
     margin: 0 auto;
+    min-width: 32rem;
 }
 .popular-post-container{
     margin: 2rem 0rem;
@@ -278,7 +280,7 @@ main{
 .popular-post-container > h2{
     font-size: 1.6rem;
     color: var(--font-color-dark);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     margin: 1rem 0rem;
     position: relative;
@@ -309,6 +311,7 @@ main{
 .popular-post-card .thumbnail-image>img{
     width: 12rem;
     height: 9rem;
+    object-fit: cover;
 }
 .popular-post-card .post-info{
     display: flex;
@@ -317,10 +320,11 @@ main{
 }
 .popular-post-card .post-info > h2{
     font-size: 1.6rem;
+    font-weight: 600;
     color: var(--font-color-dark);
     text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -342,7 +346,7 @@ main{
 
 /* Footer Start */
 footer h2{
-    color: var(--font-color-light);
+    color: var(--highlight-color);
 }
 footer ul{
     list-style: none;
@@ -366,7 +370,7 @@ footer ul li a:hover{
     justify-content: space-around;
 }
 .footer-left>h2, .footer-right>h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 .footer-right {
@@ -406,8 +410,25 @@ footer ul li a:hover{
     .wrapper{
         width: 100%;
     }
+    main{
+        margin: 1rem 5rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    main{
+        margin: 1rem 3rem;
+    }
+    .blogpost-card .post-info > h2{
+        -webkit-line-clamp: 3;
+    }
+    .popular-post-card .post-info > h2{
+        -webkit-line-clamp: 3;
+    }
 }
 @media only screen and (max-width: 850px) {
+    main{
+        margin: 1rem 2rem;
+    }
     .blogpost-card .thumbnail-image > img{
         width: 18rem;
         height: 12rem;
@@ -425,6 +446,9 @@ footer ul li a:hover{
     }
     .active-overlay{
         display: block;
+    }
+    main{
+        margin: 1rem 1rem;
     }
     .menu-box{
         display: block;
@@ -468,7 +492,7 @@ footer ul li a:hover{
     }
     .blogpost-card .thumbnail-image > img{
         width: 20rem;
-        height: 15rem;
+        height: 14rem;
     }
     .right-sidebar{
         width: 100%;
@@ -477,15 +501,15 @@ footer ul li a:hover{
         margin: 0 auto;
     }
     .popular-post-container > h2 {
-        font-size: 2rem;
-        font-weight: 800;
+        font-size: 1.8rem;
+        font-weight: 700;
     }
     .popular-post-card {
         padding: 1.5rem 0rem;
     }
     .popular-post-card .thumbnail-image>img{
         width: 20rem;
-        height: 15rem;
+        height: 14rem;
     }
     .popular-post-card .post-info > h2{
         font-size: 1.8rem;
@@ -509,7 +533,9 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 480px) {
-
+    main{
+        margin: 0rem;
+    }
     .blogpost-card .thumbnail-image > img{
         width: 16rem;
         height: 12rem;

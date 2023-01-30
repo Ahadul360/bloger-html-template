@@ -28,6 +28,22 @@
     width: 1170px;
     margin: 0 auto;
 }
+.content-overlay{
+    background-color: black; 
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    display: none;
+    z-index: 99;
+}
+.active-overlay{
+    display: block;
+}
+.no-scroll {
+    overflow-y: hidden;
+  }
+  
 .ads{
     text-align: center; 
     color:rgb(0, 0, 0); 
@@ -45,15 +61,16 @@
     height: 30rem;
     background-color: rgb(255, 255, 255);
 }
-.no-scroll {
-    overflow-y: hidden;
-  }
 
 
 
 
 /* Header Start */
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
 }
 .header-top{
@@ -432,18 +449,6 @@ footer ul li a:hover{
     }
 }
 @media only screen and (max-width: 768px) {
-    .content-overlay{
-        background-color: black; 
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        opacity: 0.5;
-        display: none;
-        z-index: 99;
-    }
-    .active-overlay{
-        display: block;
-    }
     main{
         margin: 1rem 1rem;
     }

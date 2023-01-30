@@ -74,14 +74,14 @@ header{
     text-decoration: none;
 }
 .site-logo>a>h2{
-    font-size: 2rem;
-    color: var(--highlight-color);
-    background-color: var(--font-color-light);
+    font-size: 1.8rem;
+    color: var(--font-color-light);
+    background-color: var(--secondary-color);
     padding: 0.4rem;
 }
 .nav-icon{
     display: flex;
-    background-color: var(--highlight-color);
+    background-color: var(--secondary-color);
 }
 .search-box{
     display: flex;
